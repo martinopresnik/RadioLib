@@ -23,7 +23,7 @@ int16_t RF69::begin(float freq, float br, float freqDev, float rxBw, int8_t powe
 
     // check version register
     int16_t version = getChipVersion();
-    if(version == RADIOLIB_RF69_CHIP_VERSION) {
+    if(version == RADIOLIB_RF69_CHIP_VERSION || version == RADIOLIB_RF65_CHIP_VERSION) {
       flagFound = true;
     } else {
       #if defined(RADIOLIB_DEBUG)

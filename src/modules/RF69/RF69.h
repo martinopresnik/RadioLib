@@ -165,6 +165,7 @@
 
 // RF69_REG_VERSION
 #define RADIOLIB_RF69_CHIP_VERSION                             0x24        //  7     0
+#define RADIOLIB_RF65_CHIP_VERSION                             0x23        //  7     0
 
 // RF69_REG_PA_LEVEL
 #define RADIOLIB_RF69_PA0_OFF                                  0b00000000  //  7     7     PA0 disabled
