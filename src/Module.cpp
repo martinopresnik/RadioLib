@@ -146,7 +146,7 @@ int16_t Module::SPIsetRegValue(uint8_t reg, uint8_t value, uint8_t msb, uint8_t 
     // some registers need a bit of time to process the change (e.g. SX127X_REG_OP_MODE)
     uint32_t start = this->micros();
     uint8_t readValue = 0x00;
-    while(this->micros() - start < (checkInterval * 1000)) {
+    while(this->micros() - start < (checkInterval * 1000 * 1000)) {
       readValue = SPIreadRegister(reg);
       if((readValue & checkMask) == (newValue & checkMask)) {
         // check passed, we can stop the loop
